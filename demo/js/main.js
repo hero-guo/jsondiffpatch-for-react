@@ -9,8 +9,8 @@ class Main extends Component {
     children: PropTypes.object,
   };
   render() {
-    const left = {a: 1};
-    const right = {a: 1};
+    const left = undefined;
+    const right = undefined;
     return (<JsonDiffReact left={left} right={right} />);
   }
 }

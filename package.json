@@ -2,7 +2,7 @@
   "name": "jsondiffpatch-for-react",
   "version": "1.0.0",
   "description": "jsondiffpatch for react",
-  "main": "index.js",
+  "main": "./src/jsondiff-for-react.js",
   "scripts": {
     "start": "NODE_ENV=dev node server.js",
     "build": "npm i && webpack --config webpack.config.production.js --progress",
