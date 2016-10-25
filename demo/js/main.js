@@ -2,13 +2,16 @@
  * Created by guoguangyu on 2016/10/25.
 */
 import React, {Component, PropTypes} from 'react';
+import JsonDiffReact from '../../src/jsondiff-for-react';
 
 class Main extends Component {
   static propTypes = {
     children: PropTypes.object,
   };
   render() {
-    return (<div>Hello Word</div>);
+    const left = {a: 1};
+    const right = {a: 1};
+    return (<JsonDiffReact left={left} right={right} />);
   }
 }
 export default Main;

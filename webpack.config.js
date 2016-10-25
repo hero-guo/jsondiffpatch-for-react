@@ -30,8 +30,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.styl'],
     root: [
-      path.join(__dirname, 'js'),
-      path.join(__dirname, 'css'),
+      path.join(__dirname, '/demo/js'),
+      path.join(__dirname, '/demo/css'),
     ],
     modulesDirectories: [
       'node_modules'
@@ -42,14 +42,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loaders: ['eslint', 'jscs'],
-        include: path.join(__dirname, '/demo/js')
+        include: [path.join(__dirname, '/demo/js'), path.join(__dirname, '/src')]
       }
     ],
     loaders: [
       {
         test: /\.jsx?$/,
         loaders: ['babel'],
-        include: path.join(__dirname, '/demo/js')
+        include: [path.join(__dirname, '/demo/js'), path.join(__dirname, '/src')]
       }, {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract(
@@ -82,7 +82,7 @@ module.exports = {
       }, {
         test: /\.json$/,
         loader: 'json-loader',
-        include: path.join(__dirname, '/demo/js')
+        include: [path.join(__dirname, '/demo/js'), path.join(__dirname, '/src')]
       }
     ],
     postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]

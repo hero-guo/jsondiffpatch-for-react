@@ -25,6 +25,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"]}],
     "react/forbid-prop-types": [0, {"forbid": []}],
     "react/prefer-stateless-function": 0,
+    "newline-after-import": 0,
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true}
     ]
