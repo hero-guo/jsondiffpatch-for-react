@@ -1,6 +1,5 @@
 {
   "preset": "airbnb",
-  "esnext": true,
   "excludeFiles": [
     "dist/**", "node_modules/**", "webpack*"
   ],
