@@ -1,0 +1,34 @@
+{
+  "preset": "airbnb",
+  "esnext": true,
+  "excludeFiles": [
+    "dist/**", "node_modules/**", "webpack*"
+  ],
+  "requirePaddingNewLinesBeforeLineComments": null,
+  "requireTrailingComma": null,
+  "validateQuoteMarks": null,
+  "validateIndentation": {
+    "value": 2,
+    "allExcept": [
+      "comments"
+    ]
+  },
+  "maximumLineLength": {
+    "value": 80,
+    "allExcept": [
+      "comments", "urlComments", "functionSignature"
+    ]
+  },
+  "requirePaddingNewLinesAfterBlocks": null,
+  "disallowEmptyBlocks": {
+    "allExcept": [
+      "comments"
+    ]
+  },
+  "requireSpacesInsideObjectBrackets": false,
+  "requireSpacesInAnonymousFunctionExpression": false,
+  "requireSemicolons": false,
+  "requireDollarBeforejQueryAssignment": false,
+  "requireShorthandArrowFunctions": false,
+  "disallowArrayDestructuringReturn": false
+}

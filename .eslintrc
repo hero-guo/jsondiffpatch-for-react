@@ -1,0 +1,29 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "restParams": true,
+    "experimentalObjectRestSpread": true
+  },
+  "globals": {
+    "km": false,
+    "d3": false,
+    "$": false,
+    "__DEVTOOLS__": false,
+    "__DMTEST__": false,
+    "__DEVELOPMENT__": false
+  },
+  "rules": {
+    "comma-dangle": [0, "never"],
+    "spaced-comment": [0, "always"],
+    "func-names": 0,
+    "react/jsx-quotes": 0,
+    "jsx-quotes": 2,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-unused-expressions": 0,
+    "no-undef": 1
+  }
+}

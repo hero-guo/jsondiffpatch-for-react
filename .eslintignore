@@ -1,0 +1,6 @@
+dist/*
+node_modules/*
+**/node_modules/*
+server.js
+webpack**
+styleguide.js
