@@ -1,0 +1,22 @@
+### Node template
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+node_modules
+
+.jshintignore
+.jshintrc
+
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
