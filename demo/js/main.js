@@ -9,7 +9,7 @@ class Main extends Component {
     children: PropTypes.object,
   };
   render() {
-    const left = undefined;
+    const left = {a: 1};
     const right = undefined;
     return (<JsonDiffReact left={left} right={right} />);
   }

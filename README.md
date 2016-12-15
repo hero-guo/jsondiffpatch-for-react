@@ -22,10 +22,10 @@ jsondiffpatch for react简单封装
 
 * `left` (array, object, string)
 * `right` (array, object, string)
-* `show` (array, object, string)
+* `show` (bool)
 
     you can show/hide unchanged values
 
-* `annotated` (array, object, string)
+* `annotated` (bool)
 
     This will render the original JSON delta in html, with annotations aside explaining the meaning of each part. This attempts to make the JSON delta format self-explained.

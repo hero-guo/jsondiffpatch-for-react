@@ -26,7 +26,7 @@ class JsonDiffReact extends Component {
     return (
       html ?
         <div dangerouslySetInnerHTML={{__html: html}} /> :
-          <p style={{fontSize: 12, color: '#999'}}>{text}</p>
+        <p style={{fontSize: 12, color: '#999'}}>{text}</p>
     );
   }
 }
