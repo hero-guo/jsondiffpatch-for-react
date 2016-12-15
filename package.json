@@ -1,6 +1,6 @@
 {
   "name": "jsondiffpatch-for-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jsondiffpatch for react",
   "main": "./lib/jsondiff-for-react.js",
   "scripts": {
