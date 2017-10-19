@@ -1,7 +1,8 @@
 /**
  * Created by guoguangyu on 2016/10/25.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import jsondiffpatch from 'jsondiffpatch/src/main';
 import formatters from 'jsondiffpatch/src/main-formatters';
 
