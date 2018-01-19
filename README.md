@@ -1,11 +1,11 @@
 # jsondiffpatch-for-react
 jsondiffpatch for react简单封装
 
-#1. install
+# 1. install
 
     npm install jsondiffpatch-for-react
 
-#2. usage
+# 2. usage
 
     import React from 'react';
     import JsonDiffReact from 'jsondiffpatch-for-react';
@@ -18,7 +18,7 @@ jsondiffpatch for react简单封装
         tips: PropTypes.string,
     />
 
-#3. component props
+# 3. component props
 
 * `left` (array, object, string)
 * `right` (array, object, string)
