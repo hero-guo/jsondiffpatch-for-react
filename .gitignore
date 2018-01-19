@@ -13,7 +13,7 @@ node_modules
 
 .jshintignore
 .jshintrc
-
+package-lock.json
 
 # IntelliJ project files
 .idea
