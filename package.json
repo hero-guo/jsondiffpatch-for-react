@@ -79,6 +79,6 @@
     "react": ">=0.13.2 || ^0.14 || ^15.0.0"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.3.10"
+    "jsondiffpatch": "^0.3.11"
   }
 }
