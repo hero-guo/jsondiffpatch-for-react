@@ -1,5 +1,7 @@
 # jsondiffpatch-for-react
-jsondiffpatch for react简单封装
+Based on https://github.com/benjamine/jsondiffpatch
+
+
 
 # 1. install
 
@@ -7,21 +9,26 @@ jsondiffpatch for react简单封装
 
 # 2. usage
 
-    import React from 'react';
-    import JsonDiffReact from 'jsondiffpatch-for-react';
+```jsx
+import React from 'react';
+import JsonDiffReact from 'jsondiffpatch-for-react';
 
-    <JsonDiffReact
-        right: PropTypes.any,
-        left: PropTypes.any,
-        show: PropTypes.bool,
-        annotated: PropTypes.bool,
-        tips: PropTypes.string,
-    />
+<JsonDiffReact
+    right: PropTypes.any,
+    left: PropTypes.any,
+    show: PropTypes.bool,
+    annotated: PropTypes.bool,
+    tips: PropTypes.string,
+    objectHash: PropTypes.func,
+/>
+```
 
 # 3. component props
 
 * `left` (array, object, string)
+
 * `right` (array, object, string)
+
 * `show` (bool)
 
     you can show/hide unchanged values
@@ -29,3 +36,22 @@ jsondiffpatch for react简单封装
 * `annotated` (bool)
 
     This will render the original JSON delta in html, with annotations aside explaining the meaning of each part. This attempts to make the JSON delta format self-explained.
+
+* `tips` (string)
+
+  Message that will displayed in case both elements are identical.
+
+* `objectHash` (function)
+
+  Will be passed to *jsondiffpatch* to improve array comparison performance, as described [here](https://github.com/benjamine/jsondiffpatch/blob/master/docs/arrays.md#an-example-using-objecthash).
+  Example:
+
+  ```jsx
+  <JsonDiffReact
+    left={left}
+    right={right}
+    objectHash={(obj: any) => obj.id || obj._id || obj.name || JSON.stringify(obj)}
+  />
+  ```
+
+  

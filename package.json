@@ -68,7 +68,7 @@
     "redux-logger": "^1.0.6",
     "rimraf": "^2.5.4",
     "style-loader": "^0.12.3",
-    "stylus": "^0.52.4",
+    "stylus": "^0.54.7",
     "stylus-loader": "^1.6.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.5.7",
@@ -79,6 +79,6 @@
     "react": ">=0.13.2 || ^0.14 || ^15.0.0"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.3.10"
+    "jsondiffpatch": "^0.3.11"
   }
 }
