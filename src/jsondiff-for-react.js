@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import * as Jsondiffpatch from 'jsondiffpatch/dist/jsondiffpatch.umd.js';
+import * as Jsondiffpatch from 'jsondiffpatch';
 
 import 'jsondiffpatch/dist/formatters-styles/html.css';
 import 'jsondiffpatch/dist/formatters-styles/annotated.css';
