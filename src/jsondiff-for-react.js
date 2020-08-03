@@ -28,17 +28,23 @@ class JsonDiffReact extends Component {
       tips,
       objectHash,
     } = this.props;
-    const delta = Jsondiffpatch.create({ objectHash }).diff(left, right);
+    const delta = Jsondiffpatch.create({
+      objectHash,
+
+      arrays: {
+        // default true, detect items moved inside the array (otherwise they will be registered as remove+add)
+        detectMove: true,
+        // default false, the value of items moved is not included in deltas
+        includeValueOnMove: true,
+      },
+    }).diff(left, right);
     const html = annotated
       ? formatters.annotated.format(delta)
       : formatters.html.format(delta, left);
     show ? formatters.html.showUnchanged() : formatters.html.hideUnchanged();
     console.log("test");
     return html ? (
-      <span>
-        <h1>hi there</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </span>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     ) : (
       <p style={{ fontSize: 12, color: "#999" }}>
         {tips || "Both objects are identical."}
