@@ -32,9 +32,9 @@ class JsonDiffReact extends Component {
       objectHash,
       arrays: {
         // default true, detect items moved inside the array (otherwise they will be registered as remove+add)
-        detectMove: true,
+        detectMove: false,
         // default false, the value of items moved is not included in deltas
-        includeValueOnMove: false,
+        includeValueOnMove: true,
       },
     }).diff(left, right);
     const html = annotated
