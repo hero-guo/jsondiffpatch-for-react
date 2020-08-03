@@ -1,12 +1,12 @@
 /**
  * Created by guoguangyu on 2016/10/25.
  */
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import * as Jsondiffpatch from 'jsondiffpatch';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import * as Jsondiffpatch from "jsondiffpatch";
 
-import 'jsondiffpatch/dist/formatters-styles/html.css';
-import 'jsondiffpatch/dist/formatters-styles/annotated.css';
+import "jsondiffpatch/dist/formatters-styles/html.css";
+import "jsondiffpatch/dist/formatters-styles/annotated.css";
 
 const formatters = Jsondiffpatch.formatters;
 
@@ -20,18 +20,29 @@ class JsonDiffReact extends Component {
     objectHash: PropTypes.func,
   };
   render() {
-    const { right, left, show = true, annotated = false, tips, objectHash } = this.props;
+    const {
+      right,
+      left,
+      show = true,
+      annotated = false,
+      tips,
+      objectHash,
+    } = this.props;
     const delta = Jsondiffpatch.create({ objectHash }).diff(left, right);
     const html = annotated
       ? formatters.annotated.format(delta)
       : formatters.html.format(delta, left);
     show ? formatters.html.showUnchanged() : formatters.html.hideUnchanged();
     return html ? (
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <span>
+        <h1>hi there</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </span>
     ) : (
-      <p style={{ fontSize: 12, color: '#999' }}>{tips || 'Both objects are identical.'}</p>
-      );
+      <p style={{ fontSize: 12, color: "#999" }}>
+        {tips || "Both objects are identical."}
+      </p>
+    );
   }
 }
 export default JsonDiffReact;
-
