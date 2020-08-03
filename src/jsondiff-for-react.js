@@ -33,6 +33,7 @@ class JsonDiffReact extends Component {
       ? formatters.annotated.format(delta)
       : formatters.html.format(delta, left);
     show ? formatters.html.showUnchanged() : formatters.html.hideUnchanged();
+    console.log("test");
     return html ? (
       <span>
         <h1>hi there</h1>
