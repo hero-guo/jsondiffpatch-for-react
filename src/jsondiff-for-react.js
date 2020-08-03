@@ -35,7 +35,6 @@ class JsonDiffReact extends Component {
       ? formatters.annotated.format(delta)
       : formatters.html.format(delta, left);
     show ? formatters.html.showUnchanged() : formatters.html.hideUnchanged();
-    console.log("test2");
     return html ? (
       <div dangerouslySetInnerHTML={{ __html: html }} />
     ) : (
