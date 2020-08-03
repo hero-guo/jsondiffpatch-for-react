@@ -30,19 +30,18 @@ class JsonDiffReact extends Component {
     } = this.props;
     const delta = Jsondiffpatch.create({
       objectHash,
-
       arrays: {
         // default true, detect items moved inside the array (otherwise they will be registered as remove+add)
         detectMove: true,
         // default false, the value of items moved is not included in deltas
-        includeValueOnMove: true,
+        includeValueOnMove: false,
       },
     }).diff(left, right);
     const html = annotated
       ? formatters.annotated.format(delta)
       : formatters.html.format(delta, left);
     show ? formatters.html.showUnchanged() : formatters.html.hideUnchanged();
-    console.log("test");
+    console.log("test2");
     return html ? (
       <div dangerouslySetInnerHTML={{ __html: html }} />
     ) : (
